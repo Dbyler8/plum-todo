@@ -1,0 +1,21 @@
+#center {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  place-items: center;
+  flex-grow: 1;
+  padding: 8px 32px;
+
+  @media (max-width: 1024px) {
+    padding: 8px 20px;
+    gap: 18px;
+  }
+}
+
+.center--app {
+  justify-content: flex-start;
+}
+
+.center--auth {
+  justify-content: center;
+}
