@@ -56,7 +56,7 @@ If you want to enable it:
 1. Create a Google Cloud project.
 2. Enable the Google Identity / OAuth flow for that project.
 3. Create OAuth client credentials.
-4. Follow Google's setup guide to configure consent, redirect behavior, and local development settings.
+4. Follow Google's [setup guide](https://developers.google.com/identity/protocols/oauth2/web-server#creatingcred) to configure consent, redirect behavior, and local development settings.
      - Authorized Origin: `http://localhost:5173`
      - Redirect URI: `http://localhost:5222/google/auth`
 6. In `front-end/.env`, set `VITE_USE_GOOGLE_AUTH=true`.

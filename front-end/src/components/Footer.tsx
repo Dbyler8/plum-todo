@@ -10,7 +10,7 @@ function Footer() {
         </span>
         <a
           className="footer-icon-link interactive-control"
-          href="https://github.com/dbyler8"
+          href="https://github.com/dbyler8/plum-todo"
           target="_blank"
           rel="noreferrer"
           aria-label="GitHub profile"
