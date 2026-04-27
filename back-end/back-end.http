@@ -1,0 +1,152 @@
+@baseUrl = http://localhost:5222
+
+### ==================== USERS ====================
+
+### GET all users
+GET {{baseUrl}}/users
+Accept: application/json
+
+### GET user by id
+GET {{baseUrl}}/users/1
+Accept: application/json
+
+### POST create user
+POST {{baseUrl}}/users
+Content-Type: application/json
+
+{
+  "email": "john@example.com",
+  "name": "John Doe",
+  "title": "Engineer",
+  "department": "Engineering",
+  "location": "NYC",
+  "phone": "555-1234",
+  "password": "password123"
+}
+
+### PUT update user
+PUT {{baseUrl}}/users/1
+Content-Type: application/json
+
+{
+  "email": "john.updated@example.com",
+  "name": "John Doe Updated",
+  "title": "Senior Engineer",
+  "department": "Engineering",
+  "location": "NYC",
+  "phone": "555-5678",
+  "password": "password123"
+}
+
+### PATCH user (partial update)
+PATCH {{baseUrl}}/users/1
+Content-Type: application/json
+
+{
+  "title": "Principal Engineer",
+  "phone": "555-7777"
+}
+
+### DELETE user
+DELETE {{baseUrl}}/users/1
+
+###
+
+### ==================== TASKS ====================
+
+### GET all tasks
+GET {{baseUrl}}/tasks
+Accept: application/json
+
+### GET task by id
+GET {{baseUrl}}/tasks/1
+Accept: application/json
+
+### POST create task
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "title": "Build API",
+  "description": "Create REST API endpoints",
+  "status": "In Progress",
+  "dueDate": "2026-05-01",
+  "priority": "High"
+}
+
+### PUT update task
+PUT {{baseUrl}}/tasks/1
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "tag": "Backend",
+  "tagColor": 6,
+  "title": "Build API",
+  "description": "Create REST API endpoints - Updated",
+  "status": "Done",
+  "dueDate": "2026-05-01",
+  "priority": "High"
+}
+
+### PATCH task (partial update)
+PATCH {{baseUrl}}/tasks/1
+Content-Type: application/json
+
+{
+  "status": "Blocked",
+  "priority": "Medium"
+}
+
+### DELETE task
+DELETE {{baseUrl}}/tasks/1
+
+###
+
+### ==================== COMMENTS ====================
+
+### GET all comments
+GET {{baseUrl}}/comments
+Accept: application/json
+
+### GET comment by id
+GET {{baseUrl}}/comments/1
+Accept: application/json
+
+### GET comments by task id
+GET {{baseUrl}}/tasks/1/comments
+Accept: application/json
+
+### POST create comment
+POST {{baseUrl}}/comments
+Content-Type: application/json
+
+{
+  "taskId": 1,
+  "userId": 1,
+  "content": "Great progress on this task!"
+}
+
+### PUT update comment
+PUT {{baseUrl}}/comments/1
+Content-Type: application/json
+
+{
+  "taskId": 1,
+  "userId": 1,
+  "content": "Updated comment - Great progress!"
+}
+
+### PATCH comment (partial update)
+PATCH {{baseUrl}}/comments/1
+Content-Type: application/json
+
+{
+  "content": "Patched comment text only"
+}
+
+### DELETE comment
+DELETE {{baseUrl}}/comments/1
+
+###

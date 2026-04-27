@@ -57,9 +57,11 @@ If you want to enable it:
 2. Enable the Google Identity / OAuth flow for that project.
 3. Create OAuth client credentials.
 4. Follow Google's setup guide to configure consent, redirect behavior, and local development settings.
-5. In `front-end/.env`, set `VITE_USE_GOOGLE_AUTH=true`.
-6. In `front-end/.env`, set `VITE_AUTH_CLIENT_ID` to your Google client ID.
-7. In `back-end`, store the matching credentials with user secrets:
+     - Authorized Origin: `http://localhost:5173`
+     - Redirect URI: `http://localhost:5222/google/auth`
+6. In `front-end/.env`, set `VITE_USE_GOOGLE_AUTH=true`.
+7. In `front-end/.env`, set `VITE_AUTH_CLIENT_ID` to your Google client ID.
+8. In `back-end`, store the matching credentials with user secrets:
 
 ```bash
 dotnet user-secrets init
