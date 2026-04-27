@@ -1,0 +1,42 @@
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 32px;
+  border-bottom: 1px solid var(--border);
+
+  @media (max-width: 1024px) {
+    padding: 16px 20px;
+  }
+}
+
+.nav-button {
+  gap: 10px;
+  min-height: 44px;
+  border-color: var(--accent);
+  color: var(--text-h);
+}
+
+.nav-button.is-active {
+  border-color: var(--accent-border);
+}
+
+.home-button {
+  padding: 5px 14px;
+  font-weight: 500;
+}
+
+.user-button {
+  width: 44px;
+  padding: 5px;
+}
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
